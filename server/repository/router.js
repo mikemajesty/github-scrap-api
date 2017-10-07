@@ -8,5 +8,7 @@ router.post('/stars', action.getStars);
 router.post('/forks', action.getForks);
 router.post('/best', action.getBestRepository);
 router.post('/language', action.getLanguage);
+router.post('/full/languages', action.getAllLanguages);
+router.post('/full/names', action.getAllNames);
 
 module.exports = router;

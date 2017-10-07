@@ -78,9 +78,6 @@ const getBestRepositoty = (model) => {
 		return (parseInt(value.stars) + parseInt(value.forks)) === sumStarAndFork;
 	});
 
-	bestRepositoty.stars = parseInt(bestRepositoty.stars);
-	bestRepositoty.forks = parseInt(bestRepositoty.forks);
-
 	const data = {
 		bestRepositoty
 	};
@@ -103,10 +100,34 @@ const getLanguage = (model) => {
 	return data;
 };
 
+const getAllLanguages = (model) => {
+
+	const languages = _.orderBy(model, 'language', 'asc');
+
+	const data = {
+		repositories: languages || 'noob'
+	};
+
+	return data;
+};
+
+const getAllNames = (model) => {
+
+	const names = _.orderBy(model, 'name', 'asc');
+
+	const data = {
+		repositories: names || 'noob'
+	};
+
+	return data;
+};
+
 module.exports = {
 	fullRules,
 	getStars,
 	getForks,
 	getBestRepositoty,
-	getLanguage
+	getLanguage,
+	getAllLanguages,
+	getAllNames
 };

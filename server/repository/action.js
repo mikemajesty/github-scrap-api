@@ -14,13 +14,13 @@ const getRulesRepository = (req, res, next) => {
 };
 
 const getStars = (req, res, next) => {
-  repositoryService.getRepository(req.body.username).then((data) => {
+  repositoryService.getStars(req.body.username).then((data) => {
      res.send(rules.getStars(data));
   });
 };
 
 const getForks = (req, res, next) => {
-  repositoryService.getRepository(req.body.username).then((data) => {
+  repositoryService.getForks(req.body.username).then((data) => {
      res.send(rules.getForks(data));
   });
 };
@@ -37,11 +37,25 @@ const getLanguage = (req, res, next) => {
   });
 };
 
+const getAllNames = (req, res, next) => {
+  repositoryService.getRepositoryName(req.body.username).then((data) => {
+     res.send(rules.getAllNames(data));
+  });
+};
+
+const getAllLanguages = (req, res, next) => {
+  repositoryService.getRepositoryLanguage(req.body.username).then((data) => {
+     res.send(rules.getAllLanguages(data));
+  });
+};
+
 module.exports = {
   getRepository,
   getRulesRepository,
   getStars,
   getForks,
   getBestRepository,
-  getLanguage
+  getLanguage,
+  getAllLanguages,
+  getAllNames
 };
