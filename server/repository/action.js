@@ -9,7 +9,7 @@ const getRepository = (req, res, next) => {
 
 const getRulesRepository = (req, res, next) => {
   repositoryService.getRepository(req.body.username).then((data) => {
-     res.send(rules.fullRules(data));
+     res.send(rules.fullRules(data, req.body.relevantrepository));
   });
 };
 

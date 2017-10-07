@@ -1,7 +1,18 @@
 const _ = require('lodash');
 
-const fullRules = (model) => {
-	
+const fullRules = (model, rules) => {
+	/*{
+	"username": "mikemajesty",
+	"relevantrepository": {
+		"stars": 5,
+		"fork": 1
+	}
+} */
+	const rule = {
+		stars: rules.stars || 10,
+		forks: rules.forks || 1
+	};
+
 	const sumStarAndFork = _.max(_.map(model, (value) => {
 		return (parseInt(value.stars) + parseInt(value.forks));
 	}));
@@ -21,7 +32,7 @@ const fullRules = (model) => {
 	});
 
 	const relevantsRepositories = _.filter(model, (value) => {
-		return value.stars > 5 && value.forks > 0;
+		return value.stars >= rule.stars && value.forks >= rule.forks;
 	});
 
 	const forks = _.sumBy(model, (value) => {
@@ -31,19 +42,19 @@ const fullRules = (model) => {
 	const data = {
 		stars,
 		forks,
+		language: language ? language[0].language : 'noob',
+		bestRepositoty: bestRepositoty || 'noob',
 		repositories: {
 			full: model,
 			relevants: relevantsRepositories
-		},
-		bestRepositoty: bestRepositoty || 'noob',
-		language: language ? language[0].language : 'noob'
+		}
 	};
 
 	return data;
 };
 
 const getStars = (model) => {
-	
+
 	const stars = _.sumBy(model, (value) => {
 		return parseInt(value.stars);
 	});
@@ -56,7 +67,7 @@ const getStars = (model) => {
 };
 
 const getForks = (model) => {
-	
+
 	const forks = _.sumBy(model, (value) => {
 		return parseInt(value.forks);
 	});
@@ -69,7 +80,7 @@ const getForks = (model) => {
 };
 
 const getBestRepositoty = (model) => {
-	
+
 	const sumStarAndFork = _.max(_.map(model, (value) => {
 		return (parseInt(value.stars) + parseInt(value.forks));
 	}));
