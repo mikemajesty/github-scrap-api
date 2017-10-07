@@ -1,5 +1,5 @@
 {
-  "name": "github-api",
+  "name": "github-scrap-api",
   "version": "0.0.1",
   "description": "",
   "main": "server.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mikemajesty/github-api.git"
+    "url": "git+https://github.com/mikemajesty/github-scrap-api.git"
   },
   "author": "Mike Lima <mikee_2008@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mikemajesty/github-api/issues"
+    "url": "https://github.com/mikemajesty/github-scrap-api/issues"
   },
-  "homepage": "https://github.com/mikemajesty/github-api#readme",
+  "homepage": "https://github.com/mikemajesty/github-scrap-api#readme",
   "dependencies": {
     "body-parser": "^1.17.2",
     "cheerio": "^1.0.0-rc.2",
