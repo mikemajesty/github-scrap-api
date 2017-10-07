@@ -15,4 +15,4 @@ app.use((req, res, next) => {
 	next();
 });
 
-app.use('/', require('server/api'));
+app.use('/', require('./server/api'));
