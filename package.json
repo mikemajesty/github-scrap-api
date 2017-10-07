@@ -1,0 +1,26 @@
+{
+  "name": "github-api",
+  "version": "0.0.1",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikemajesty/github-api.git"
+  },
+  "author": "Mike Lima <mikee_2008@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mikemajesty/github-api/issues"
+  },
+  "homepage": "https://github.com/mikemajesty/github-api#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "express": "^4.14.1",
+    "request": "^2.81.0",
+    "request-promise": "^4.2.1",
+    "body-parser": "^1.17.2"
+  }
+}
