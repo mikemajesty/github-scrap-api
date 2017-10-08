@@ -21,7 +21,39 @@ const getStreakBody = (userName) => {
 
         currentStreak.push({
           date: date,
-          commit: commit
+          commit: parseInt(commit)
+        });
+
+      });
+
+      return currentStreak;
+    })
+    .catch(function(err) {
+      console.log('error', err);
+    });
+};
+
+const getCurrentStreak= (userName) => {
+  const options = {
+    uri: `https://github.com/${userName}`,
+    transform: function(body) {
+      return cheerio.load(body);
+    }
+  };
+
+  return rp(options)
+    .then(function($) {
+
+      let currentStreak = [];
+
+      $('.day').each(function(index) {
+
+        const date = $(this).prop('data-date');
+        const commit = $(this).prop('data-count');
+
+        currentStreak.push({
+          date: date,
+          commit: parseInt(commit)
         });
 
       });
@@ -34,5 +66,6 @@ const getStreakBody = (userName) => {
 };
 
 module.exports = {
-  getStreakBody
+  getStreakBody,
+  getCurrentStreak
 };

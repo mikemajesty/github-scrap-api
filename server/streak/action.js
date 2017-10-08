@@ -1,11 +1,26 @@
+const rules = require('./rules');
 const streakService = require("./service");
 
-const getScrapStreak = (req, res, next) => {
-  streakService.getStreakBody(req.body.username).then(function(params) {
-    res.send(params);
+const getMaxCommit = (req, res, next) => {
+  streakService.getStreakBody(req.body.username).then(function(data) {
+    res.status(200).send(rules.getMaxCommits(data));
+  });
+};
+
+const getCurrentStreak = (req, res, next) => {
+  streakService.getCurrentStreak(req.body.username).then(function(data) {
+    res.status(200).send(rules.getCurrentStreak(data).toString());
+  });
+};
+
+const getFullStreak = (req, res, next) => {
+  streakService.getCurrentStreak(req.body.username).then(function(data) {
+    res.status(200).send(data);
   });
 };
 
 module.exports = {
-  getScrapStreak
+  getMaxCommit,
+  getCurrentStreak,
+  getFullStreak
 };
