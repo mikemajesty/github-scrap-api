@@ -2,13 +2,13 @@ const express = require('express');
 const router = express.Router();
 const action = require('./action');
 
-router.post('/full', action.getRepository);
-router.post('/format', action.getRulesRepository);
-router.post('/stars', action.getStars);
-router.post('/forks', action.getForks);
-router.post('/best', action.getBestRepository);
-router.post('/language', action.getLanguage);
-router.post('/full/languages', action.getAllLanguages);
-router.post('/full/names', action.getAllNames);
+router.use('/full', action.getRepository);
+router.use('/format', action.getRulesRepository);
+router.use('/stars', action.getStars);
+router.use('/forks', action.getForks);
+router.use('/best', action.getBestRepository);
+router.use('/favorite/language', action.getLanguage);
+router.use('/languages', action.getAllLanguages);
+router.use('/names', action.getAllNames);
 
 module.exports = router;

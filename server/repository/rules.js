@@ -1,10 +1,6 @@
 const _ = require('lodash');
 
 const fullRules = (model, rules) => {
-	const rule = {
-		stars: rules.stars || 10,
-		forks: rules.forks || 1
-	};
 
 	const sumStarAndFork = _.max(_.map(model, (value) => {
 		return (parseInt(value.stars) + parseInt(value.forks));
@@ -25,7 +21,7 @@ const fullRules = (model, rules) => {
 	});
 
 	const relevantsRepositories = _.filter(model, (value) => {
-		return value.stars >= rule.stars && value.forks >= rule.forks;
+		return value.stars >= rules.stars && value.forks >= rules.forks;
 	});
 
 	const forks = _.sumBy(model, (value) => {
