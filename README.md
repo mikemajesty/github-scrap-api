@@ -30,6 +30,18 @@ $http.post('https://legend-of-github-api.herokuapp.com/repository/stars', { user
 axios.post(`https://legend-of-github-api.herokuapp.com/repository/stars`, { username: 'username' })
 ```
 
+#### Get all the forks in your repositories. ```repository/forks```
+[![repository-forks.png](https://s1.postimg.org/93se84bacv/api3.png)](https://postimg.org/image/7x92zimdrf/)
+
+##### Angular
+``` JavaScript
+
+$http.post('https://legend-of-github-api.herokuapp.com/repository/forks', { username: 'username' } )
+```
+##### VUE axios
+``` JavaScript
+axios.post(`https://legend-of-github-api.herokuapp.com/repository/forks`, { username: 'username' })
+
 
 
 
