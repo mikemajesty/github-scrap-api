@@ -269,6 +269,9 @@ $http.post('https://legend-of-github-api.herokuapp.com/streak/maxcommit', { user
 axios.post(`https://legend-of-github-api.herokuapp.com/streak/maxcommit`, { username: 'username' })
 ```
 
+
+
+
 ### License
 
 It is available under the MIT license.
