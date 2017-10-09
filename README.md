@@ -140,6 +140,34 @@ axios.post(`https://legend-of-github-api.herokuapp.com/user/full`, { username: '
 
 <hr>
 
+```user/stars```
+#### Get all stars in other repositories
+[![user-stars.png](https://s1.postimg.org/1o9ufc48j3/api9.png)](https://postimg.org/image/924jo3ow8b/)
+##### Angular
+``` JavaScript
+$http.post('https://legend-of-github-api.herokuapp.com/user/stars', { username: 'username' } )
+```
+##### VUE axios
+``` JavaScript
+axios.post(`https://legend-of-github-api.herokuapp.com/user/stars`, { username: 'username' })
+```
+
+<hr>
+
+
+```user/fallowers```
+#### Get user followers
+[![user-stars.png](https://s1.postimg.org/1o9ufc48j3/api9.png)](https://postimg.org/image/924jo3ow8b/)
+##### Angular
+``` JavaScript
+$http.post('https://legend-of-github-api.herokuapp.com/user/stars', { username: 'username' } )
+```
+##### VUE axios
+``` JavaScript
+axios.post(`https://legend-of-github-api.herokuapp.com/user/stars`, { username: 'username' })
+```
+
+<hr>
 
 
 
