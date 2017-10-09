@@ -9,7 +9,7 @@ const getMaxCommit = (req, res, next) => {
 
 const getCurrentStreak = (req, res, next) => {
   streakService.getCurrentStreak(req.body.username).then(function(data) {
-    res.status(200).send(rules.getCurrentStreak(data).toString());
+    res.status(200).send({streak: rules.getCurrentStreak(data).toString()});
   });
 };
 
