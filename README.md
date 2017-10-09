@@ -83,7 +83,7 @@ axios.post(`https://legend-of-github-api.herokuapp.com/repository/language`, { u
 <hr>
 
 ```repository/full/languages```
-#### Gets all names of repositories
+#### Gets all languages of repositories
 [![repository-all-languages.png](https://s1.postimg.org/7a8wc6p8cf/api6.png)](https://postimg.org/image/5lzjezyy63/)
 
 ##### Angular
@@ -97,6 +97,21 @@ axios.post(`https://legend-of-github-api.herokuapp.com/repository/full/languages
 
 <hr>
 
+```repository/full/names```
+#### Gets all names of repositories
+[![api7.png](https://s1.postimg.org/9gmc9y2vmn/api7.png)](https://postimg.org/image/26b8ywbamz/)
+
+
+##### Angular
+``` JavaScript
+$http.post('https://legend-of-github-api.herokuapp.com/repository/full/names', { username: 'username' } )
+```
+##### VUE axios
+``` JavaScript
+axios.post(`https://legend-of-github-api.herokuapp.com/repository/full/names`, { username: 'username' })
+```
+
+<hr>
 
 
 
