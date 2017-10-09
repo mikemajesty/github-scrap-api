@@ -170,6 +170,22 @@ axios.post(`https://legend-of-github-api.herokuapp.com/user/followers`, { userna
 <hr>
 
 
+```user/following```
+#### Get user following
+[![user-following.png](https://s1.postimg.org/75fh6fl8y7/api12.png)](https://postimg.org/image/11np3zikjv/)
+##### Angular
+``` JavaScript
+$http.post('https://legend-of-github-api.herokuapp.com/user/following', { username: 'username' } )
+```
+##### VUE axios
+``` JavaScript
+axios.post(`https://legend-of-github-api.herokuapp.com/user/following`, { username: 'username' })
+```
+
+<hr>
+
+
+
 
 ### License
 
