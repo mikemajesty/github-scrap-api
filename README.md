@@ -8,7 +8,7 @@
 
 
 ```repository/full```
-#### Get repository information. 
+#### Get repository information
 [![repository.png](https://s1.postimg.org/8bcyuqz2yn/api1.png)](https://postimg.org/image/7tmx65xpdn/)
 
 ##### Angular
@@ -23,7 +23,7 @@ axios.post(`https://legend-of-github-api.herokuapp.com/repository/full`, { usern
 <hr>
 
 ```repository/stars```
-#### Get all the stars in your repositories. 
+#### Get all the stars in your repositories
 
 [![repository-stars.png](https://s1.postimg.org/7gwsxsxhgf/api2.png)](https://postimg.org/image/3c17lp0bdn/)
 
@@ -38,7 +38,7 @@ axios.post(`https://legend-of-github-api.herokuapp.com/repository/stars`, { user
 <hr>
 
 ```repository/forks```
-#### Get all the forks in your repositories. 
+#### Get all the forks in your repositories
 [![repository-forks.png](https://s1.postimg.org/93se84bacv/api3.png)](https://postimg.org/image/7x92zimdrf/)
 
 ##### Angular
@@ -61,6 +61,19 @@ $http.post('https://legend-of-github-api.herokuapp.com/repository/best', { usern
 ##### VUE axios
 ``` JavaScript
 axios.post(`https://legend-of-github-api.herokuapp.com/repository/best`, { username: 'username' })
+```
+
+<hr>
+
+```repository/language```
+#### Gets the most used language
+[![repository-language.png](https://s1.postimg.org/7k67czed9r/api5.png)](https://postimg.org/image/5sd8i2v0dn/)
+``` JavaScript
+$http.post('https://legend-of-github-api.herokuapp.com/repository/language', { username: 'username' } )
+```
+##### VUE axios
+``` JavaScript
+axios.post(`https://legend-of-github-api.herokuapp.com/repository/language`, { username: 'username' })
 ```
 
 <hr>
