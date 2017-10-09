@@ -51,12 +51,10 @@ axios.post(`https://legend-of-github-api.herokuapp.com/user/full`, { username: '
 
 ### Streak information
 
+``` streak```
 
-## User streak information
-[![user-streak.png](https://s1.postimg.org/5gvwqoyeun/api20.png)](https://postimg.org/image/4z5v23x19n/)
-```streak```
 #### Get user streak
-
+[![user-streak.png](https://s1.postimg.org/5gvwqoyeun/api20.png)](https://postimg.org/image/4z5v23x19n/)
 ##### Angular
 ``` JavaScript
 $http.post('https://legend-of-github-api.herokuapp.com/streak', { username: 'username' } )
