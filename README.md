@@ -3,7 +3,11 @@
 ## API link.
 [click here](https://legend-of-github-api.herokuapp.com/)
 
-## Repository information
+## Custom API
+
+
+### Repository information
+
 
 ```repository/format```
 #### Gets specific information formatted from repositories
@@ -27,6 +31,46 @@ axios.post(`https://legend-of-github-api.herokuapp.com/repository/format`, { use
 ```relevantrepository``` *Rules to define a relevant repository*
 
 <hr>
+
+### User informarion
+
+
+```user/full```
+#### Get all user information
+[![user-all.png](https://s1.postimg.org/93xmkrzu9r/outro.png)](https://postimg.org/image/1q2xc0f6kb/)
+##### Angular
+``` JavaScript
+$http.post('https://legend-of-github-api.herokuapp.com/user/full', { username: 'username' } )
+```
+##### VUE axios
+``` JavaScript
+axios.post(`https://legend-of-github-api.herokuapp.com/user/full`, { username: 'username' })
+```
+
+<hr>
+
+### Streak information
+
+
+## User streak information
+[![user-streak.png](https://s1.postimg.org/5gvwqoyeun/api20.png)](https://postimg.org/image/4z5v23x19n/)
+```streak```
+#### Get user streak
+
+##### Angular
+``` JavaScript
+$http.post('https://legend-of-github-api.herokuapp.com/streak', { username: 'username' } )
+```
+##### VUE axios
+``` JavaScript
+axios.post(`https://legend-of-github-api.herokuapp.com/streak`, { username: 'username' })
+```
+
+<hr>
+
+## Default API
+
+## Repository information
 
 ```repository/full```
 #### Get repository information
@@ -127,20 +171,6 @@ axios.post(`https://legend-of-github-api.herokuapp.com/repository/full/names`, {
 
 ## User information
 
-```user/full```
-#### Get all user information
-[![user-all.png](https://s1.postimg.org/93xmkrzu9r/outro.png)](https://postimg.org/image/1q2xc0f6kb/)
-##### Angular
-``` JavaScript
-$http.post('https://legend-of-github-api.herokuapp.com/user/full', { username: 'username' } )
-```
-##### VUE axios
-``` JavaScript
-axios.post(`https://legend-of-github-api.herokuapp.com/user/full`, { username: 'username' })
-```
-
-<hr>
-
 ```user/stars```
 #### Get all stars in other repositories
 [![user-stars.png](https://s1.postimg.org/1o9ufc48j3/api9.png)](https://postimg.org/image/924jo3ow8b/)
@@ -223,22 +253,6 @@ $http.post('https://legend-of-github-api.herokuapp.com/user/commits/average', { 
 ##### VUE axios
 ``` JavaScript
 axios.post(`https://legend-of-github-api.herokuapp.com/user/commits/average`, { username: 'username' })
-```
-
-<hr>
-
-## User streak information
-[![user-streak.png](https://s1.postimg.org/5gvwqoyeun/api20.png)](https://postimg.org/image/4z5v23x19n/)
-```streak```
-#### Get user streak
-
-##### Angular
-``` JavaScript
-$http.post('https://legend-of-github-api.herokuapp.com/streak', { username: 'username' } )
-```
-##### VUE axios
-``` JavaScript
-axios.post(`https://legend-of-github-api.herokuapp.com/streak`, { username: 'username' })
 ```
 
 <hr>
