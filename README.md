@@ -1,7 +1,7 @@
 # The simplest github scrap API.
 
 ## API link.
-[click here](https://legend-of-github-api.herokuapp.com/)
+[https://legend-of-github-api.herokuapp.com/](https://legend-of-github-api.herokuapp.com/)
 
 ## Custom API
 
