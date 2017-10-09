@@ -212,6 +212,18 @@ axios.post(`https://legend-of-github-api.herokuapp.com/user/organizations`, { us
 
 <hr>
 
+```user/commits/average```
+#### Get user commits average
+[![commit-average.png](https://s1.postimg.org/1nbe29ii8v/novo.png)](https://postimg.org/image/4b0ucmbjkr/)
+##### Angular
+``` JavaScript
+$http.post('https://legend-of-github-api.herokuapp.com/user/commits/average', { username: 'username' } )
+```
+##### VUE axios
+``` JavaScript
+axios.post(`https://legend-of-github-api.herokuapp.com/user/commits/average`, { username: 'username' })
+```
+
 ### License
 
 It is available under the MIT license.
