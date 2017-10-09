@@ -198,6 +198,20 @@ axios.post(`https://legend-of-github-api.herokuapp.com/user/commits`, { username
 
 <hr>
 
+```user/organizations```
+#### Get user organizations
+[![user-organizations.png](https://s1.postimg.org/1lwchksovj/api14.png)](https://postimg.org/image/2lcfuqvg17/)
+##### Angular
+``` JavaScript
+$http.post('https://legend-of-github-api.herokuapp.com/user/organizations', { username: 'username' } )
+```
+##### VUE axios
+``` JavaScript
+axios.post(`https://legend-of-github-api.herokuapp.com/user/organizations`, { username: 'username' })
+```
+
+<hr>
+
 ### License
 
 It is available under the MIT license.
