@@ -5,14 +5,18 @@
 
 ## Repository information
 
-```
-POST: body 
-{
-	"username": "mikemajesty"
-}
-https://legend-of-github-api.herokuapp.com/repository/full
-```
+#### Get repository information 
+[![repository.png](https://s1.postimg.org/8bcyuqz2yn/api1.png)](https://postimg.org/image/7tmx65xpdn/)
 
+##### Angular
+``` JavaScript
+
+$http.post('https://legend-of-github-api.herokuapp.com/repository/full', { username: 'mikemajesty' } )
+```
+##### VUE axios
+``` JavaScript
+axios.post(`https://legend-of-github-api.herokuapp.com/repository/full`, { username: 'mikemajesty' })
+```
 
 ### License
 
