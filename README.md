@@ -3,9 +3,11 @@
 ## API link.
 [click here](https://legend-of-github-api.herokuapp.com/)
 
-```repository/full```
 ## Repository information
 
+
+
+```repository/full```
 #### Get repository information. 
 [![repository.png](https://s1.postimg.org/8bcyuqz2yn/api1.png)](https://postimg.org/image/7tmx65xpdn/)
 
@@ -18,6 +20,8 @@ $http.post('https://legend-of-github-api.herokuapp.com/repository/full', { usern
 ``` JavaScript
 axios.post(`https://legend-of-github-api.herokuapp.com/repository/full`, { username: 'username' })
 ```
+
+<hr>
 
 ```repository/stars```
 #### Get all the stars in your repositories. 
@@ -33,6 +37,7 @@ $http.post('https://legend-of-github-api.herokuapp.com/repository/stars', { user
 ``` JavaScript
 axios.post(`https://legend-of-github-api.herokuapp.com/repository/stars`, { username: 'username' })
 ```
+<hr>
 
 ```repository/forks```
 #### Get all the forks in your repositories. 
