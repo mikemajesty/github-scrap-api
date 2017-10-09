@@ -8,6 +8,6 @@ router.post('/followers', action.getFollowers);
 router.post('/following', action.getFollowing);
 router.post('/commits', action.getCommits);
 router.post('/organizations', action.getOrganizationQuantity);
-router.post('/commits/avarage', action.getCommistAvarage);
+router.post('/commits/average', action.getCommistAverage);
 
 module.exports = router;

@@ -36,8 +36,8 @@ const getOrganizationQuantity = (req, res, next) => {
   });
 };
 
-const getCommistAvarage = (req, res, next) => {
-  baseInformationService.getCommistAvarage(req.body.username).then(function(data) {
+const getCommistAverage = (req, res, next) => {
+  baseInformationService.getCommistAverage(req.body.username).then(function(data) {
     res.send(data);
   });
 };
@@ -49,5 +49,5 @@ module.exports = {
   getFollowing,
   getCommits,
   getOrganizationQuantity,
-  getCommistAvarage
+  getCommistAverage
 };

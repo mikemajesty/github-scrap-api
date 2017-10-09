@@ -30,7 +30,7 @@ const getFullInformation = (userName) => {
         following: arrayInformation[3],
         commits: commitInteger,
         organizations: organizations,
-        commitsAvarage: commitInteger > 0 ? parseFloat((commitInteger / 365).toFixed(1)) : 0
+        commitsAverage: commitInteger > 0 ? parseFloat((commitInteger / 365).toFixed(1)) : 0
       };
 
     })
@@ -167,7 +167,7 @@ const getOrganizationQuantity = (userName) => {
     });
 };
 
-const getCommistAvarage = (userName) => {
+const getCommistAverage = (userName) => {
 
   var options = {
     uri: `https://github.com/${userName}`,
@@ -183,7 +183,7 @@ const getCommistAvarage = (userName) => {
       const commitInteger =  commits ? parseInt(commits[0].replace(",", "").replace(".", "")) : 0;
 
       return  {
-        commitsAvarage: commitInteger > 0 ? parseFloat((commitInteger / 365).toFixed(1)) : 0
+        commitsAverage: commitInteger > 0 ? parseFloat((commitInteger / 365).toFixed(1)) : 0
       };
 
     })
@@ -199,5 +199,5 @@ module.exports = {
   getFollowing,
   getCommits,
   getOrganizationQuantity,
-  getCommistAvarage
+  getCommistAverage
 };
