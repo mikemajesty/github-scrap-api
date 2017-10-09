@@ -128,7 +128,7 @@ axios.post(`https://legend-of-github-api.herokuapp.com/repository/full/names`, {
 
 ```user/full```
 #### Get all user information
-[![user-all.png](https://s1.postimg.org/6e0xgd5vlb/api9.png)](https://postimg.org/image/85twb9p8h7/)
+[![user-all.png](https://s1.postimg.org/93xmkrzu9r/outro.png)](https://postimg.org/image/1q2xc0f6kb/)
 ##### Angular
 ``` JavaScript
 $http.post('https://legend-of-github-api.herokuapp.com/user/full', { username: 'username' } )
