@@ -11,12 +11,37 @@
 ##### Angular
 ``` JavaScript
 
-$http.post('https://legend-of-github-api.herokuapp.com/repository/full', { username: 'mikemajesty' } )
+$http.post('https://legend-of-github-api.herokuapp.com/repository/full', { username: 'yourgithubprofilename' } )
 ```
 ##### VUE axios
 ``` JavaScript
-axios.post(`https://legend-of-github-api.herokuapp.com/repository/full`, { username: 'mikemajesty' })
+axios.post(`https://legend-of-github-api.herokuapp.com/repository/full`, { username: 'yourgithubprofilename' })
 ```
+#### Get all the stars in your repositories.
+[![repository-stars.png](https://s1.postimg.org/7gwsxsxhgf/api2.png)](https://postimg.org/image/3c17lp0bdn/)
+
+##### Angular
+``` JavaScript
+
+$http.post('https://legend-of-github-api.herokuapp.com/repository/stars', { username: 'yourgithubprofilename' } )
+```
+##### VUE axios
+``` JavaScript
+axios.post(`https://legend-of-github-api.herokuapp.com/repository/stars`, { username: 'yourgithubprofilename' })
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### License
 
