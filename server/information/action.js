@@ -46,7 +46,7 @@ module.exports = {
   getFullInformation,
   getStars,
   getFollowers,
-  getFallowing,
+  getFollowing,
   getCommits,
   getOrganizationQuantity,
   getCommistAvarage
