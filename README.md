@@ -5,8 +5,11 @@
 
 ## Repository information
 
-** POST
 ```
+POST: body 
+{
+	"username": "mikemajesty"
+}
 https://legend-of-github-api.herokuapp.com/repository/full
 ```
 
