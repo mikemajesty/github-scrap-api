@@ -13,7 +13,6 @@
 
 ##### Angular
 ``` JavaScript
-
 $http.post('https://legend-of-github-api.herokuapp.com/repository/full', { username: 'username' } )
 ```
 ##### VUE axios
@@ -30,7 +29,6 @@ axios.post(`https://legend-of-github-api.herokuapp.com/repository/full`, { usern
 
 ##### Angular
 ``` JavaScript
-
 $http.post('https://legend-of-github-api.herokuapp.com/repository/stars', { username: 'username' } )
 ```
 ##### VUE axios
@@ -45,14 +43,27 @@ axios.post(`https://legend-of-github-api.herokuapp.com/repository/stars`, { user
 
 ##### Angular
 ``` JavaScript
-
 $http.post('https://legend-of-github-api.herokuapp.com/repository/forks', { username: 'username' } )
 ```
 ##### VUE axios
 ``` JavaScript
 axios.post(`https://legend-of-github-api.herokuapp.com/repository/forks`, { username: 'username' })
+```
 
+<hr>
 
+```repository/best```
+#### Get the best repository
+[![repository-best.png](https://s1.postimg.org/7ayf4j33r3/api4.png)](https://postimg.org/image/5flubwqo57/)
+``` JavaScript
+$http.post('https://legend-of-github-api.herokuapp.com/repository/best', { username: 'username' } )
+```
+##### VUE axios
+``` JavaScript
+axios.post(`https://legend-of-github-api.herokuapp.com/repository/best`, { username: 'username' })
+```
+
+<hr>
 
 
 
