@@ -228,7 +228,7 @@ axios.post(`https://legend-of-github-api.herokuapp.com/user/commits/average`, { 
 <hr>
 
 ## User streak information
-
+[![user-streak.png](https://s1.postimg.org/5gvwqoyeun/api20.png)](https://postimg.org/image/4z5v23x19n/)
 ```streak```
 #### Get user streak
 
