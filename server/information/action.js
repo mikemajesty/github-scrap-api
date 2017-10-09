@@ -45,7 +45,7 @@ const getCommistAvarage = (req, res, next) => {
 module.exports = {
   getFullInformation,
   getStars,
-  getFallowers,
+  getFollowers,
   getFallowing,
   getCommits,
   getOrganizationQuantity,

@@ -26,8 +26,8 @@ const getFullInformation = (userName) => {
 
       return  {
         stars: arrayInformation[1],
-        fallowers: arrayInformation[2],
-        fallowing: arrayInformation[3],
+        followers: arrayInformation[2],
+        following: arrayInformation[3],
         commits: commitInteger,
         organizations: organizations,
         commitsAvarage: commitInteger > 0 ? parseFloat((commitInteger / 365).toFixed(1)) : 0
@@ -66,7 +66,7 @@ const getStars = (userName) => {
     });
 };
 
-const getFallowers = (userName) => {
+const getFollowers = (userName) => {
 
   var options = {
     uri: `https://github.com/${userName}`,
@@ -84,7 +84,7 @@ const getFallowers = (userName) => {
       });
 
       return  {
-        fallowers: arrayInformation[2]
+        followers: arrayInformation[2]
       };
 
     })
@@ -93,7 +93,7 @@ const getFallowers = (userName) => {
     });
 };
 
-const getFallowing = (userName) => {
+const getFollowing = (userName) => {
 
   var options = {
     uri: `https://github.com/${userName}`,
@@ -111,7 +111,7 @@ const getFallowing = (userName) => {
       });
 
       return  {
-        fallowing: arrayInformation[3]
+        following: arrayInformation[3]
       };
 
     })
@@ -195,8 +195,8 @@ const getCommistAvarage = (userName) => {
 module.exports = {
   getFullInformation,
   getStars,
-  getFallowers,
-  getFallowing,
+  getFollowers,
+  getFollowing,
   getCommits,
   getOrganizationQuantity,
   getCommistAvarage
