@@ -1,13 +1,6 @@
 const _ = require('lodash');
 
 const fullRules = (model, rules) => {
-	/*{
-	"username": "mikemajesty",
-	"relevantrepository": {
-		"stars": 5,
-		"fork": 1
-	}
-} */
 	const rule = {
 		stars: rules.stars || 10,
 		forks: rules.forks || 1
@@ -45,8 +38,8 @@ const fullRules = (model, rules) => {
 		language: language ? language[0].language : 'noob',
 		bestRepositoty: bestRepositoty || 'noob',
 		repositories: {
-			full: model,
-			relevants: relevantsRepositories
+			relevants: relevantsRepositories,
+			full: model
 		}
 	};
 
