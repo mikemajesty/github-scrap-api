@@ -49,7 +49,8 @@ axios.post(`https://legend-of-github-api.herokuapp.com/user/full`, { username: '
 
 <hr>
 
-### Streak information
+### 
+information
 
 ``` streak```
 
@@ -242,7 +243,7 @@ axios.post(`https://legend-of-github-api.herokuapp.com/user/organizations`, { us
 <hr>
 
 ```user/commits/average```
-#### Get user commits average
+#### Get user average commits
 [![commit-average.png](https://s1.postimg.org/1nbe29ii8v/novo.png)](https://postimg.org/image/4b0ucmbjkr/)
 ##### Angular
 ``` JavaScript
