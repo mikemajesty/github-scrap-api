@@ -184,8 +184,19 @@ axios.post(`https://legend-of-github-api.herokuapp.com/user/following`, { userna
 
 <hr>
 
+```user/commits```
+#### Get user commits
+[![user-commits.png](https://s1.postimg.org/48jilf69zz/api13.png)](https://postimg.org/image/5t99kw3hgb/)
+##### Angular
+``` JavaScript
+$http.post('https://legend-of-github-api.herokuapp.com/user/commits', { username: 'username' } )
+```
+##### VUE axios
+``` JavaScript
+axios.post(`https://legend-of-github-api.herokuapp.com/user/commits`, { username: 'username' })
+```
 
-
+<hr>
 
 ### License
 
