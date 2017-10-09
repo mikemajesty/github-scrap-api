@@ -49,8 +49,7 @@ axios.post(`https://legend-of-github-api.herokuapp.com/user/full`, { username: '
 
 <hr>
 
-### 
-information
+### Streak information.
 
 ``` streak```
 
