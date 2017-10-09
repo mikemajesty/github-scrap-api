@@ -5,7 +5,7 @@
 
 ## Repository information
 
-#### Get repository information 
+#### Get repository information  ```repository/full```
 [![repository.png](https://s1.postimg.org/8bcyuqz2yn/api1.png)](https://postimg.org/image/7tmx65xpdn/)
 
 ##### Angular
