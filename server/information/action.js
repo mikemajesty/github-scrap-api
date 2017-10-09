@@ -1,43 +1,43 @@
 const baseInformationService = require("./service");
 
 const getFullInformation = (req, res, next) => {
-  baseInformationService.getFullInformation(req.body.username).then(function(data) {
+  baseInformationService.getFullInformation(req.query.username).then(function(data) {
     res.send(data);
   });
 };
 
 const getStars = (req, res, next) => {
-  baseInformationService.getStars(req.body.username).then(function(data) {
+  baseInformationService.getStars(req.query.username).then(function(data) {
     res.send(data);
   });
 };
 
 const getFollowers = (req, res, next) => {
-  baseInformationService.getFollowers(req.body.username).then(function(data) {
+  baseInformationService.getFollowers(req.query.username).then(function(data) {
     res.send(data);
   });
 };
 
 const getFollowing = (req, res, next) => {
-  baseInformationService.getFollowing(req.body.username).then(function(data) {
+  baseInformationService.getFollowing(req.query.username).then(function(data) {
     res.send(data);
   });
 };
 
 const getCommits = (req, res, next) => {
-  baseInformationService.getCommits(req.body.username).then(function(data) {
+  baseInformationService.getCommits(req.query.username).then(function(data) {
     res.send(data);
   });
 };
 
 const getOrganizationQuantity = (req, res, next) => {
-  baseInformationService.getOrganizationQuantity(req.body.username).then(function(data) {
+  baseInformationService.getOrganizationQuantity(req.query.username).then(function(data) {
     res.send(data);
   });
 };
 
 const getCommistAverage = (req, res, next) => {
-  baseInformationService.getCommistAverage(req.body.username).then(function(data) {
+  baseInformationService.getCommistAverage(req.query.username).then(function(data) {
     res.send(data);
   });
 };
