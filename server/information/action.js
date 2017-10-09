@@ -12,13 +12,13 @@ const getStars = (req, res, next) => {
   });
 };
 
-const getFallowers = (req, res, next) => {
+const getFollowers = (req, res, next) => {
   baseInformationService.getFallowers(req.body.username).then(function(data) {
     res.send(data);
   });
 };
 
-const getFallowing = (req, res, next) => {
+const getFollowing = (req, res, next) => {
   baseInformationService.getFallowing(req.body.username).then(function(data) {
     res.send(data);
   });
