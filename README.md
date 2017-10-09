@@ -224,6 +224,49 @@ $http.post('https://legend-of-github-api.herokuapp.com/user/commits/average', { 
 axios.post(`https://legend-of-github-api.herokuapp.com/user/commits/average`, { username: 'username' })
 ```
 
+<hr>
+
+## User streak information
+
+```streak```
+#### Get user streak
+
+##### Angular
+``` JavaScript
+$http.post('https://legend-of-github-api.herokuapp.com/streak', { username: 'username' } )
+```
+##### VUE axios
+``` JavaScript
+axios.post(`https://legend-of-github-api.herokuapp.com/streak`, { username: 'username' })
+```
+
+<hr>
+
+```streak/full```
+#### Get all the streaks of the user
+[![api16.png](https://s1.postimg.org/54h9yp4v7j/api16.png)](https://postimg.org/image/1vi621hdkr/)
+##### Angular
+``` JavaScript
+$http.post('https://legend-of-github-api.herokuapp.com/streak/full', { username: 'username' } )
+```
+##### VUE axios
+``` JavaScript
+axios.post(`https://legend-of-github-api.herokuapp.com/streak/full`, { username: 'username' })
+```
+
+<hr>
+```/streak/maxcommit```
+#### Get max commits day
+[![max-commit.png](https://s1.postimg.org/9rsfrpyf9b/api17.png)](https://postimg.org/image/5qggdbubwb/)
+##### Angular
+``` JavaScript
+$http.post('https://legend-of-github-api.herokuapp.com/streak/maxcommit', { username: 'username' } )
+```
+##### VUE axios
+``` JavaScript
+axios.post(`https://legend-of-github-api.herokuapp.com/streak/maxcommit`, { username: 'username' })
+```
+
 ### License
 
 It is available under the MIT license.
