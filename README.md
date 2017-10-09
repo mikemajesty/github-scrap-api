@@ -253,6 +253,9 @@ $http.post('https://legend-of-github-api.herokuapp.com/user/commits/average', { 
 ``` JavaScript
 axios.post(`https://legend-of-github-api.herokuapp.com/user/commits/average`, { username: 'username' })
 ```
+<hr>
+
+## Streak information
 
 <hr>
 
