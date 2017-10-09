@@ -5,7 +5,28 @@
 
 ## Repository information
 
+```repository/format```
+#### Gets specific information formatted from repositories
+[![repository-format.png](https://s1.postimg.org/8f1ojqknb3/api8.png)](https://postimg.org/image/2id4cq44cb/)
 
+##### Angular
+``` JavaScript
+$http.post('https://legend-of-github-api.herokuapp.com/repository/format', { username: 'mikemajesty',
+	'relevantrepository': {
+		'stars': 5,
+		'fork': 1
+	} } )
+```
+##### VUE axios
+``` JavaScript
+axios.post(`https://legend-of-github-api.herokuapp.com/repository/format`, { username: 'mikemajesty',
+	'relevantrepository': {
+		'stars': 5,
+		'fork': 1
+	} } )
+```
+```relevantrepository``` *Rules to define a relevant repository*
+<hr>
 
 ```repository/full```
 #### Get repository information
