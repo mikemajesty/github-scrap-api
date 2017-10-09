@@ -55,6 +55,8 @@ axios.post(`https://legend-of-github-api.herokuapp.com/repository/forks`, { user
 ```repository/best```
 #### Get the best repository
 [![repository-best.png](https://s1.postimg.org/7ayf4j33r3/api4.png)](https://postimg.org/image/5flubwqo57/)
+
+##### Angular
 ``` JavaScript
 $http.post('https://legend-of-github-api.herokuapp.com/repository/best', { username: 'username' } )
 ```
@@ -68,6 +70,8 @@ axios.post(`https://legend-of-github-api.herokuapp.com/repository/best`, { usern
 ```repository/language```
 #### Gets the most used language
 [![repository-language.png](https://s1.postimg.org/7k67czed9r/api5.png)](https://postimg.org/image/5sd8i2v0dn/)
+
+##### Angular
 ``` JavaScript
 $http.post('https://legend-of-github-api.herokuapp.com/repository/language', { username: 'username' } )
 ```
@@ -78,8 +82,20 @@ axios.post(`https://legend-of-github-api.herokuapp.com/repository/language`, { u
 
 <hr>
 
+```repository/full/languages```
+#### Gets all names of repositories
+[![repository-all-languages.png](https://s1.postimg.org/7a8wc6p8cf/api6.png)](https://postimg.org/image/5lzjezyy63/)
 
+##### Angular
+``` JavaScript
+$http.post('https://legend-of-github-api.herokuapp.com/repository/full/languages', { username: 'username' } )
+```
+##### VUE axios
+``` JavaScript
+axios.post(`https://legend-of-github-api.herokuapp.com/repository/full/languages`, { username: 'username' })
+```
 
+<hr>
 
 
 
