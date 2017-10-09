@@ -3,9 +3,10 @@
 ## API link.
 [click here](https://legend-of-github-api.herokuapp.com/)
 
+```repository/full```
 ## Repository information
 
-#### Get repository information.  ```repository/full```
+#### Get repository information. 
 [![repository.png](https://s1.postimg.org/8bcyuqz2yn/api1.png)](https://postimg.org/image/7tmx65xpdn/)
 
 ##### Angular
@@ -17,7 +18,10 @@ $http.post('https://legend-of-github-api.herokuapp.com/repository/full', { usern
 ``` JavaScript
 axios.post(`https://legend-of-github-api.herokuapp.com/repository/full`, { username: 'username' })
 ```
-#### Get all the stars in your repositories. ```repository/stars```
+
+```repository/stars```
+#### Get all the stars in your repositories. 
+
 [![repository-stars.png](https://s1.postimg.org/7gwsxsxhgf/api2.png)](https://postimg.org/image/3c17lp0bdn/)
 
 ##### Angular
@@ -30,7 +34,8 @@ $http.post('https://legend-of-github-api.herokuapp.com/repository/stars', { user
 axios.post(`https://legend-of-github-api.herokuapp.com/repository/stars`, { username: 'username' })
 ```
 
-#### Get all the forks in your repositories. ```repository/forks```
+```repository/forks```
+#### Get all the forks in your repositories. 
 [![repository-forks.png](https://s1.postimg.org/93se84bacv/api3.png)](https://postimg.org/image/7x92zimdrf/)
 
 ##### Angular
