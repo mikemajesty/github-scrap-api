@@ -25,6 +25,7 @@ axios.post(`https://legend-of-github-api.herokuapp.com/repository/format`, { use
 	} } )
 ```
 ```relevantrepository``` *Rules to define a relevant repository*
+
 <hr>
 
 ```repository/full```
@@ -255,6 +256,7 @@ axios.post(`https://legend-of-github-api.herokuapp.com/streak/full`, { username:
 ```
 
 <hr>
+
 ```/streak/maxcommit```
 #### Get max commits day
 [![max-commit.png](https://s1.postimg.org/9rsfrpyf9b/api17.png)](https://postimg.org/image/5qggdbubwb/)
