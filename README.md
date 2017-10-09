@@ -155,21 +155,74 @@ axios.post(`https://legend-of-github-api.herokuapp.com/user/stars`, { username: 
 <hr>
 
 
-```user/fallowers```
+```user/followers```
 #### Get user followers
-[![user-stars.png](https://s1.postimg.org/1o9ufc48j3/api9.png)](https://postimg.org/image/924jo3ow8b/)
+[![user-followers.png](https://s1.postimg.org/8hzq3xuckv/api10.png)](https://postimg.org/image/939dq8osvf/)
 ##### Angular
 ``` JavaScript
-$http.post('https://legend-of-github-api.herokuapp.com/user/stars', { username: 'username' } )
+$http.post('https://legend-of-github-api.herokuapp.com/user/followers', { username: 'username' } )
 ```
 ##### VUE axios
 ``` JavaScript
-axios.post(`https://legend-of-github-api.herokuapp.com/user/stars`, { username: 'username' })
+axios.post(`https://legend-of-github-api.herokuapp.com/user/followers`, { username: 'username' })
 ```
 
 <hr>
 
 
+```user/following```
+#### Get user following
+[![user-following.png](https://s1.postimg.org/75fh6fl8y7/api12.png)](https://postimg.org/image/11np3zikjv/)
+##### Angular
+``` JavaScript
+$http.post('https://legend-of-github-api.herokuapp.com/user/following', { username: 'username' } )
+```
+##### VUE axios
+``` JavaScript
+axios.post(`https://legend-of-github-api.herokuapp.com/user/following`, { username: 'username' })
+```
+
+<hr>
+
+```user/commits```
+#### Get user commits
+[![user-commits.png](https://s1.postimg.org/48jilf69zz/api13.png)](https://postimg.org/image/5t99kw3hgb/)
+##### Angular
+``` JavaScript
+$http.post('https://legend-of-github-api.herokuapp.com/user/commits', { username: 'username' } )
+```
+##### VUE axios
+``` JavaScript
+axios.post(`https://legend-of-github-api.herokuapp.com/user/commits`, { username: 'username' })
+```
+
+<hr>
+
+```user/organizations```
+#### Get user organizations
+[![user-organizations.png](https://s1.postimg.org/1lwchksovj/api14.png)](https://postimg.org/image/2lcfuqvg17/)
+##### Angular
+``` JavaScript
+$http.post('https://legend-of-github-api.herokuapp.com/user/organizations', { username: 'username' } )
+```
+##### VUE axios
+``` JavaScript
+axios.post(`https://legend-of-github-api.herokuapp.com/user/organizations`, { username: 'username' })
+```
+
+<hr>
+
+```user/commits/average```
+#### Get user commits average
+[![commit-average.png](https://s1.postimg.org/1nbe29ii8v/novo.png)](https://postimg.org/image/4b0ucmbjkr/)
+##### Angular
+``` JavaScript
+$http.post('https://legend-of-github-api.herokuapp.com/user/commits/average', { username: 'username' } )
+```
+##### VUE axios
+``` JavaScript
+axios.post(`https://legend-of-github-api.herokuapp.com/user/commits/average`, { username: 'username' })
+```
 
 ### License
 
