@@ -155,16 +155,16 @@ axios.post(`https://legend-of-github-api.herokuapp.com/user/stars`, { username: 
 <hr>
 
 
-```user/fallowers```
+```user/followers```
 #### Get user followers
-[![user-stars.png](https://s1.postimg.org/1o9ufc48j3/api9.png)](https://postimg.org/image/924jo3ow8b/)
+[![user-followers.png](https://s1.postimg.org/8hzq3xuckv/api10.png)](https://postimg.org/image/939dq8osvf/)
 ##### Angular
 ``` JavaScript
-$http.post('https://legend-of-github-api.herokuapp.com/user/stars', { username: 'username' } )
+$http.post('https://legend-of-github-api.herokuapp.com/user/followers', { username: 'username' } )
 ```
 ##### VUE axios
 ``` JavaScript
-axios.post(`https://legend-of-github-api.herokuapp.com/user/stars`, { username: 'username' })
+axios.post(`https://legend-of-github-api.herokuapp.com/user/followers`, { username: 'username' })
 ```
 
 <hr>
