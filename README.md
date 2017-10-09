@@ -14,7 +14,7 @@
 [![repository-format.png](https://s1.postimg.org/8f1ojqknb3/api8.png)](https://postimg.org/image/2id4cq44cb/)
 ##### Angular
 ``` JavaScript
-$http.post('https://legend-of-github-api.herokuapp.com/repository/format', { username: 'mikemajesty',
+$http.post('https://legend-of-github-api.herokuapp.com/repository/format', { username: 'username',
 	'relevantrepository': {
 		'stars': 5,
 		'fork': 1
@@ -22,7 +22,7 @@ $http.post('https://legend-of-github-api.herokuapp.com/repository/format', { use
 ```
 ##### VUE axios
 ``` JavaScript
-axios.post(`https://legend-of-github-api.herokuapp.com/repository/format`, { username: 'mikemajesty',
+axios.post(`https://legend-of-github-api.herokuapp.com/repository/format`, { username: 'username',
 	'relevantrepository': {
 		'stars': 5,
 		'fork': 1
