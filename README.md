@@ -229,7 +229,7 @@
 #### Get user following
 
 ##### Request
-*```GET:```* ```https://legend-of-github-api.herokuapp.com/user/followers?username=mikemajesty```
+*```GET:```* ```https://legend-of-github-api.herokuapp.com/user/following?username=mikemajesty```
 ##### Response
 ```JSON
 {
