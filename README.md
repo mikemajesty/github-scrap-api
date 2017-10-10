@@ -249,7 +249,7 @@
 #### Gets the amount of commits
 
 ##### Request
-*```GET:```* ```https://legend-of-github-api.herokuapp.com/user/commits?username=mikemajesty``
+*```GET:```* ```https://legend-of-github-api.herokuapp.com/user/commits?username=mikemajesty```
 ##### Response
 ```JSON
 {
@@ -259,7 +259,7 @@
 #### Gets the amount of organizations
 
 ##### Request
-*```GET:```* ```https://legend-of-github-api.herokuapp.com/user/organizations?username=mikemajesty``
+*```GET:```* ```https://legend-of-github-api.herokuapp.com/user/organizations?username=mikemajesty```
 ##### Response
 ```JSON
 {
@@ -274,7 +274,7 @@
 #### Gets all streak information
 
 ##### Request
-*```GET:```* ```https://legend-of-github-api.herokuapp.com/streak/full?username=mikemajesty``
+*```GET:```* ```https://legend-of-github-api.herokuapp.com/streak/full?username=mikemajesty```
 ##### Response
 ```JSON
 [
@@ -303,7 +303,7 @@
 #### Gets the day with more commits
 
 ##### Request
-*```GET:```* ```https://legend-of-github-api.herokuapp.com/streak/maxcommit?username=mikemajesty``
+*```GET:```* ```https://legend-of-github-api.herokuapp.com/streak/maxcommit?username=mikemajesty```
 ##### Response
 ```JSON
 {
