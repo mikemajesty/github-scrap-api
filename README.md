@@ -3,7 +3,7 @@
 ## API link.
 [https://legend-of-github-api.herokuapp.com/](https://legend-of-github-api.herokuapp.com/)
 
-### Repository information
+### Custom repository information
 
 ##### Request
 *```GET:```* ```https://legend-of-github-api.herokuapp.com/repository/format?username=mikemajesty&stars=10&forks=5```
@@ -49,6 +49,23 @@
     }
 }
 ```
+### Custom user information
+
+##### Request
+*```GET``` ```https://legend-of-github-api.herokuapp.com/user/full?username=mikemajesty```
+##### Response
+```JSON
+{
+    "stars": 312,
+    "followers": 34,
+    "following": 63,
+    "commits": 1567,
+    "organizations": 4,
+    "commitsAverage": 4.3
+}
+```
+
+<hr>
 
 ### License
 
