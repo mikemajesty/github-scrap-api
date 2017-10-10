@@ -6,7 +6,7 @@
 ### Repository information
 
 ##### Request
-GET ```https://legend-of-github-api.herokuapp.com/repository/format?username=mikemajesty&stars=10&forks=5```
+*GET:* ```https://legend-of-github-api.herokuapp.com/repository/format?username=mikemajesty&stars=10&forks=5```
 
 *stars: optional* Stars to define a relevant repository, the default is >= 5.<br>
 *forks: optional* Forks to define a relevant repository, the default is >= 2.
