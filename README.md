@@ -173,7 +173,7 @@
         },
         {
             "language": "C#"
-        }
+        }]
 }
 ```
 #### Gets all names from repositories
@@ -198,9 +198,120 @@
         },
         {
             "name": "CadastroDePedidos"
-        }
+        }]
 }
 ```
+<hr>
+
+### User information
+
+#### Gets all stars in other repositories
+
+##### Request
+*```GET:```* ```https://legend-of-github-api.herokuapp.com/user/stars?username=mikemajesty```
+##### Response
+```JSON
+{
+    "stars": 312
+}
+```
+
+#### Get all your followers
+
+##### Request
+*```GET:```* ```https://legend-of-github-api.herokuapp.com/user/followers?username=mikemajesty```
+##### Response
+```JSON
+{
+    "followers": 34
+}
+```
+#### Get user following
+
+##### Request
+*```GET:```* ```https://legend-of-github-api.herokuapp.com/user/followers?username=mikemajesty```
+##### Response
+```JSON
+{
+    "following": 63
+}
+```
+#### Gets the average of the commit
+
+##### Request
+*```GET:```* ```https://legend-of-github-api.herokuapp.com/user/commits/average?username=mikemajesty```
+##### Response
+```JSON
+{
+    "commitsAverage": 4.3
+}
+```
+#### Gets the amount of commits
+
+##### Request
+*```GET:```* ```https://legend-of-github-api.herokuapp.com/user/commits?username=mikemajesty``
+##### Response
+```JSON
+{
+    "commits": 1573
+}
+```
+#### Gets the amount of organizations
+
+##### Request
+*```GET:```* ```https://legend-of-github-api.herokuapp.com/user/organizations?username=mikemajesty``
+##### Response
+```JSON
+{
+    "organizations": 4
+}
+```
+
+<hr>
+
+### Get streak information
+
+#### Gets all streak information
+
+##### Request
+*```GET:```* ```https://legend-of-github-api.herokuapp.com/streak/full?username=mikemajesty``
+##### Response
+```JSON
+[
+    {
+        "date": "2016-10-09",
+        "commit": 0
+    },
+    {
+        "date": "2016-10-10",
+        "commit": 0
+    },
+    {
+        "date": "2016-10-11",
+        "commit": 0
+    },
+    {
+        "date": "2016-10-12",
+        "commit": 0
+    },
+    {
+        "date": "2016-10-13",
+        "commit": 0
+    }
+]
+```
+#### Gets the day with more commits
+
+##### Request
+*```GET:```* ```https://legend-of-github-api.herokuapp.com/streak/maxcommit?username=mikemajesty``
+##### Response
+```JSON
+{
+    "date": "2016-10-29",
+    "commit": 64
+}
+```
+
 <hr>
 
 ### License
