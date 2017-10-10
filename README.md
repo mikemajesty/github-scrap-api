@@ -52,7 +52,7 @@
 ### Custom user information
 
 ##### Request
-*```GET```* ```https://legend-of-github-api.herokuapp.com/user/full?username=mikemajesty```
+*```GET:```* ```https://legend-of-github-api.herokuapp.com/user/full?username=mikemajesty```
 ##### Response
 ```JSON
 {
