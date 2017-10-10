@@ -116,7 +116,91 @@
     "stars": 153
 }
 ```
+#### Gets all forks from the repositories
 
+##### Request
+*```GET:```* ```https://legend-of-github-api.herokuapp.com/repository/forks?username=mikemajesty```
+##### Response
+```JSON
+{
+    "forks": 18
+}
+```
+#### Gets the best repository
+
+##### Request
+*```GET:```* ```https://legend-of-github-api.herokuapp.com/repository/best?username=mikemajesty```
+##### Response
+```JSON
+{
+    "bestRepositoty": {
+        "name": "Chocobo-Date-Range-Picker",
+        "language": "JavaScript",
+        "stars": 24,
+        "forks": 6
+    }
+}
+```
+#### Gets the favorite language
+
+##### Request
+*```GET:```* ```https://legend-of-github-api.herokuapp.com/repository/favorite/language?username=mikemajesty```
+##### Response
+```JSON
+{
+    "language": "C#"
+}
+```
+#### Gets all languages from repositories
+
+##### Request
+*```GET:```* ```https://legend-of-github-api.herokuapp.com/repository/languages?username=mikemajesty```
+##### Response
+```JSON
+{
+    "repositories": [
+        {
+            "language": "C#"
+        },
+        {
+            "language": "C#"
+        },
+        {
+            "language": "C#"
+        },
+        {
+            "language": "C#"
+        },
+        {
+            "language": "C#"
+        }
+}
+```
+#### Gets all names from repositories
+
+##### Request
+*```GET:```* ```https://legend-of-github-api.herokuapp.com/repository/names?username=mikemajesty```
+##### Response
+```JSON
+{
+    "repositories": [
+        {
+            "name": "AbstractFactory"
+        },
+        {
+            "name": "AprendendoAjaxComAsp.NetMVC5"
+        },
+        {
+            "name": "AspNetCoreTutorial"
+        },
+        {
+            "name": "BeaconMusic"
+        },
+        {
+            "name": "CadastroDePedidos"
+        }
+}
+```
 <hr>
 
 ### License
