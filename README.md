@@ -77,6 +77,48 @@
 
 <hr>
 
+### Repository information
+
+#### Get all repositories
+
+##### Request
+*```GET:```* ```https://legend-of-github-api.herokuapp.com/repository/full?username=mikemajesty```
+##### Response
+```JSON
+[
+    {
+        "name": "github-scrap-api",
+        "language": "JavaScript",
+        "stars": 6,
+        "forks": 0
+    },
+    {
+        "name": "legend_of_github",
+        "language": "JavaScript",
+        "stars": 0,
+        "forks": 0
+    },
+    {
+        "name": "coolvalidator",
+        "language": "C#",
+        "stars": 6,
+        "forks": 0
+    }
+]
+```
+#### Gets all stars from the repositories
+
+##### Request
+*```GET:```* ```https://legend-of-github-api.herokuapp.com/repository/stars?username=mikemajesty```
+##### Response
+```JSON
+{
+    "stars": 153
+}
+```
+
+<hr>
+
 ### License
 
 It is available under the MIT license.
