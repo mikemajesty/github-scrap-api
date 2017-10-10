@@ -11,7 +11,7 @@ const getRulesRepository = (req, res, next) => {
   repositoryService.getRepository(req.query.username).then((data) => {
     res.send(rules.fullRules(data, {
       stars: req.query.stars || 5,
-      forks: req.query.forks || 1
+      forks: req.query.forks || 2
     }));
   });
 };
