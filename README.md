@@ -271,6 +271,17 @@
 
 ### Get streak information
 
+#### Gets the day with more commits
+
+##### Request
+*```GET:```* ```https://legend-of-github-api.herokuapp.com/streak/maxcommit?username=mikemajesty```
+##### Response
+```JSON
+{
+    "date": "2016-10-29",
+    "commit": 64
+}
+```
 #### Gets all streak information
 
 ##### Request
@@ -300,18 +311,34 @@
     }
 ]
 ```
-#### Gets the day with more commits
+## How to solve the locale problem when I get the streak?
 
-##### Request
-*```GET:```* ```https://legend-of-github-api.herokuapp.com/streak/maxcommit?username=mikemajesty```
-##### Response
-```JSON
-{
-    "date": "2016-10-29",
-    "commit": 64
-}
+#### Using VUE with axios
+*On the client side.*
+```JavaScript
+axios.get(`https://legend-of-github-api.herokuapp.com/streak/full?username=mikemajesty`).then(res => {
+    let currentStreak = []
+    let lastCommit = 0
+    res.data.forEach(function (data, index) {
+      const date = data.date
+      const currentCommit = data.commit
+      if (new Date(data.date.replace('-', '/')).getTime() <= new Date().getTime()) {
+        if (currentCommit > 0 && (lastCommit > 0 || currentStreak.length === 0)) {
+          currentStreak.push({
+            date: date,
+            commit: currentCommit
+          })
+        } else {
+          currentStreak = []
+        }
+      }
+      lastCommit = data.commit
+    })
+    return currentStreak.length
+}).catch(e => {
+    console.log(e)
+})
 ```
-
 <hr>
 
 ### License
