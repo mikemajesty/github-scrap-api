@@ -64,6 +64,16 @@
     "commitsAverage": 4.3
 }
 ```
+### Custom streak information
+
+##### Request
+*```GET:```* ```https://legend-of-github-api.herokuapp.com/streak/quantity?username=mikemajesty```
+##### Response
+```JSON
+{
+    "streak": "365"
+}
+```
 
 <hr>
 
