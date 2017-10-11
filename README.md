@@ -316,7 +316,7 @@
 #### Using VUE with axios
 *On the client side.*
 ```JavaScript
-const getCurrentStreak = axios.post(`https://legend-of-github-api.herokuapp.com/streak/full?username=mikemajesty`)
+const getCurrentStreak = axios.get(`https://legend-of-github-api.herokuapp.com/streak/full?username=mikemajesty`)
 .then(res => {
         let currentStreak = []
         let lastCommit = 0
