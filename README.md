@@ -324,7 +324,6 @@ const getCurrentStreak = axios.get(`https://legend-of-github-api.herokuapp.com/s
           const date = data.date
           const currentCommit = data.commit
           if (new Date(data.date.replace('-', '/')).getTime() <= new Date().getTime()) {
-            console.log(currentCommit > 0 && (lastCommit > 0 || currentStreak.length === 0))
             if (currentCommit > 0 && (lastCommit > 0 || currentStreak.length === 0)) {
               currentStreak.push({
                 date: date,
