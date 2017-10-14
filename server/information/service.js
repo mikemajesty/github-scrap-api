@@ -15,7 +15,12 @@ const getFullInformation = (userName) => {
       const arrayInformation = [];
 
       $("span.Counter").each(function(index, data) {
-        arrayInformation[index] = parseInt($(data).text().trim().replace(/\n|\r/g, ""));
+         let stars = $(data).text().trim().replace(/\n|\r/g, "");
+         if(stars.includes("k"))
+         {
+            stars = parseInt(stars.replace(/[^0-9]/g, "") + "00");
+         }
+         arrayInformation[index] = stars;
       });
 
       const organizations = $('div.border-top.py-3.clearfix').find('a').length;
