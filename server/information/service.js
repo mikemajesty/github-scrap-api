@@ -20,7 +20,7 @@ const getFullInformation = (userName) => {
          {
             stars = parseInt(stars.replace(/[^0-9]/g, "") + "00");
          }
-         arrayInformation[index] = stars;
+         arrayInformation[index] = parseInt(stars);
       });
 
       const organizations = $('div.border-top.py-3.clearfix').find('a').length;
@@ -58,7 +58,12 @@ const getStars = (userName) => {
       const arrayInformation = [];
 
       $("span.Counter").each(function(index, data) {
-        arrayInformation[index] = parseInt($(data).text().trim().replace(/\n|\r/g, ""));
+         let stars = $(data).text().trim().replace(/\n|\r/g, "");
+         if(stars.includes("k"))
+         {
+            stars = parseInt(stars.replace(/[^0-9]/g, "") + "00");
+         }
+         arrayInformation[index] = parseInt(stars);
       });
 
       return  {
@@ -85,7 +90,12 @@ const getFollowers = (userName) => {
       const arrayInformation = [];
 
       $("span.Counter").each(function(index, data) {
-        arrayInformation[index] = parseInt($(data).text().trim().replace(/\n|\r/g, ""));
+        let followers = $(data).text().trim().replace(/\n|\r/g, "");
+        if(followers.includes("k"))
+        {
+           followers = parseInt(followers.replace(/[^0-9]/g, "") + "00");
+        }
+        arrayInformation[index] = parseInt(followers);
       });
 
       return  {
@@ -112,7 +122,12 @@ const getFollowing = (userName) => {
       const arrayInformation = [];
 
       $("span.Counter").each(function(index, data) {
-        arrayInformation[index] = parseInt($(data).text().trim().replace(/\n|\r/g, ""));
+        let following = $(data).text().trim().replace(/\n|\r/g, "");
+        if(following.includes("k"))
+        {
+           following = parseInt(following.replace(/[^0-9]/g, "") + "00");
+        }
+        arrayInformation[index] = parseInt(following);
       });
 
       return  {
