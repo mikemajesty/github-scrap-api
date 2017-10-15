@@ -69,6 +69,19 @@ const getPullRequest = (userName) => {
             return cheerio.load(body);
           }
         };
+        //https://assets-cdn.github.com/images/spinners/octocat-spinner-128.gif
+        if (repository.language === 'bootstrap-daterangepicker-rails') {
+          rp(contributorOption)
+            .then(function ($) {
+              console.log('ol', $('div.graphs').html())
+              $('ol').find('li').find('span').each(function (index) {
+                console.log('user', $(this).html())
+              });
+              return 'linguagens';
+            }).catch(function (err) {
+              console.log('error', err);
+            });
+        }
 
         return promiseContrinutors.push(contributorOption);
 
