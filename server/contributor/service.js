@@ -39,7 +39,6 @@ const getPullRequest = (userName) => {
               return cheerio.load(body);
             }
           };
-          console.log('optionsPaginator', optionsPaginator.uri)
           return promiseChain.then(() => rp(optionsPaginator)
             .then(function ($) {
               $('li').filter(function (i, el) {
@@ -62,9 +61,20 @@ const getPullRequest = (userName) => {
     }).catch(err => reject(err));
 
     allPages.then(data => {
-      
-      //`https://github.com/celso-wo/${}/graphs/contributors`
-      resolve(data);
+      const promiseContrinutors = [];
+      data.reduce((promiseChain, repository) => {
+        const contributorOption = {
+          uri: `https://github.com/celso-wo/${repository.language}/graphs/contributors`,
+          transform: function (body) {
+            return cheerio.load(body);
+          }
+        };
+
+        return promiseContrinutors.push(contributorOption);
+
+      }, Promise.resolve());
+
+      resolve(promiseContrinutors);
     });
   });
 };
