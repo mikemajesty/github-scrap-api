@@ -11,4 +11,8 @@ router.use('/favorite/language', action.getLanguage);
 router.use('/languages', action.getAllLanguages);
 router.use('/names', action.getAllNames);
 
+router.use('/*', (req, res) => {
+  res.status(404).send();
+});
+
 module.exports = router;

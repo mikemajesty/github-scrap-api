@@ -10,4 +10,8 @@ router.use('/commits/average', action.getCommistAverage);
 router.use('/commits', action.getCommits);
 router.use('/organizations', action.getOrganizationQuantity);
 
+router.use('/*', (req, res) => {
+  res.status(404).send();
+});
+
 module.exports = router;
