@@ -6,7 +6,7 @@
 ### Custom repository information
 
 ##### Request
-*```GET:```* ```https://legend-of-github-api.herokuapp.com/repository/format?username=mikemajesty&stars=10&forks=5```
+*```GET:```* ```https://legend-of-github-api.herokuapp.com/repository/format?username={username}&stars=10&forks=5```
 
 *stars: optional* Stars to define a relevant repository, the default is >= 5.<br>
 *forks: optional* Forks to define a relevant repository, the default is >= 2.
@@ -52,7 +52,7 @@
 ### Custom user information
 
 ##### Request
-*```GET:```* ```https://legend-of-github-api.herokuapp.com/user/full?username=mikemajesty```
+*```GET:```* ```https://legend-of-github-api.herokuapp.com/user/full?username={username}```
 ##### Response
 ```JSON
 {
@@ -67,7 +67,7 @@
 ### Custom streak information
 
 ##### Request
-*```GET:```* ```https://legend-of-github-api.herokuapp.com/streak/quantity?username=mikemajesty```
+*```GET:```* ```https://legend-of-github-api.herokuapp.com/streak/quantity?username={username}```
 ##### Response
 ```JSON
 {
@@ -82,7 +82,7 @@
 #### Get all repositories
 
 ##### Request
-*```GET:```* ```https://legend-of-github-api.herokuapp.com/repository/full?username=mikemajesty```
+*```GET:```* ```https://legend-of-github-api.herokuapp.com/repository/full?username={username}```
 ##### Response
 ```JSON
 [
@@ -109,7 +109,7 @@
 #### Gets all stars from the repositories
 
 ##### Request
-*```GET:```* ```https://legend-of-github-api.herokuapp.com/repository/stars?username=mikemajesty```
+*```GET:```* ```https://legend-of-github-api.herokuapp.com/repository/stars?username={username}```
 ##### Response
 ```JSON
 {
@@ -119,7 +119,7 @@
 #### Gets all forks from the repositories
 
 ##### Request
-*```GET:```* ```https://legend-of-github-api.herokuapp.com/repository/forks?username=mikemajesty```
+*```GET:```* ```https://legend-of-github-api.herokuapp.com/repository/forks?username={username}```
 ##### Response
 ```JSON
 {
@@ -129,7 +129,7 @@
 #### Gets the best repository
 
 ##### Request
-*```GET:```* ```https://legend-of-github-api.herokuapp.com/repository/best?username=mikemajesty```
+*```GET:```* ```https://legend-of-github-api.herokuapp.com/repository/best?username={username}```
 ##### Response
 ```JSON
 {
@@ -144,7 +144,7 @@
 #### Gets the favorite language
 
 ##### Request
-*```GET:```* ```https://legend-of-github-api.herokuapp.com/repository/favorite/language?username=mikemajesty```
+*```GET:```* ```https://legend-of-github-api.herokuapp.com/repository/favorite/language?username={username}```
 ##### Response
 ```JSON
 {
@@ -154,7 +154,7 @@
 #### Gets all languages from repositories
 
 ##### Request
-*```GET:```* ```https://legend-of-github-api.herokuapp.com/repository/languages?username=mikemajesty```
+*```GET:```* ```https://legend-of-github-api.herokuapp.com/repository/languages?username={username}```
 ##### Response
 ```JSON
 {
@@ -179,7 +179,7 @@
 #### Gets all names from repositories
 
 ##### Request
-*```GET:```* ```https://legend-of-github-api.herokuapp.com/repository/names?username=mikemajesty```
+*```GET:```* ```https://legend-of-github-api.herokuapp.com/repository/names?username={username}```
 ##### Response
 ```JSON
 {
@@ -208,7 +208,7 @@
 #### Gets all stars in other repositories
 
 ##### Request
-*```GET:```* ```https://legend-of-github-api.herokuapp.com/user/stars?username=mikemajesty```
+*```GET:```* ```https://legend-of-github-api.herokuapp.com/user/stars?username={username}```
 ##### Response
 ```JSON
 {
@@ -219,7 +219,7 @@
 #### Get all your followers
 
 ##### Request
-*```GET:```* ```https://legend-of-github-api.herokuapp.com/user/followers?username=mikemajesty```
+*```GET:```* ```https://legend-of-github-api.herokuapp.com/user/followers?username={username}```
 ##### Response
 ```JSON
 {
@@ -229,7 +229,7 @@
 #### Get user following
 
 ##### Request
-*```GET:```* ```https://legend-of-github-api.herokuapp.com/user/following?username=mikemajesty```
+*```GET:```* ```https://legend-of-github-api.herokuapp.com/user/following?username={username}```
 ##### Response
 ```JSON
 {
@@ -239,7 +239,7 @@
 #### Gets the average of the commit
 
 ##### Request
-*```GET:```* ```https://legend-of-github-api.herokuapp.com/user/commits/average?username=mikemajesty```
+*```GET:```* ```https://legend-of-github-api.herokuapp.com/user/commits/average?username={username}```
 ##### Response
 ```JSON
 {
@@ -249,7 +249,7 @@
 #### Gets the amount of commits
 
 ##### Request
-*```GET:```* ```https://legend-of-github-api.herokuapp.com/user/commits?username=mikemajesty```
+*```GET:```* ```https://legend-of-github-api.herokuapp.com/user/commits?username={username}```
 ##### Response
 ```JSON
 {
@@ -259,7 +259,7 @@
 #### Gets the amount of organizations
 
 ##### Request
-*```GET:```* ```https://legend-of-github-api.herokuapp.com/user/organizations?username=mikemajesty```
+*```GET:```* ```https://legend-of-github-api.herokuapp.com/user/organizations?username={username}```
 ##### Response
 ```JSON
 {
@@ -274,7 +274,7 @@
 #### Gets the day with more commits
 
 ##### Request
-*```GET:```* ```https://legend-of-github-api.herokuapp.com/streak/maxcommit?username=mikemajesty```
+*```GET:```* ```https://legend-of-github-api.herokuapp.com/streak/maxcommit?username={username}```
 ##### Response
 ```JSON
 {
@@ -285,7 +285,7 @@
 #### Gets all streak information
 
 ##### Request
-*```GET:```* ```https://legend-of-github-api.herokuapp.com/streak/full?username=mikemajesty```
+*```GET:```* ```https://legend-of-github-api.herokuapp.com/streak/full?username={username}```
 ##### Response
 ```JSON
 [
@@ -316,7 +316,7 @@
 #### Using VUE with axios
 *On the client side.*
 ```JavaScript
-const getCurrentStreak = axios.get(`https://legend-of-github-api.herokuapp.com/streak/full?username=mikemajesty`)
+const getCurrentStreak = axios.get(`https://legend-of-github-api.herokuapp.com/streak/full?username={username}`)
 .then(res => {
         let currentStreak = []
         let lastCommit = 0
