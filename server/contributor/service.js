@@ -61,6 +61,7 @@ const getPullRequest = (userName) => {
     allPages.then(data => {
       const getAll = [];
       let p = null;
+      console.log('---------------------> log heroku', data);
       p = data.reduce((promiseChain, repository) => {
         const contributorOption = {
           uri: `https://github.com/${userName}/${repository.language}/commits?author=${userName}`,
