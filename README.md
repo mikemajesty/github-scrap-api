@@ -74,6 +74,23 @@
     "streak": "365"
 }
 ```
+### Custom contributions information
+
+##### Request
+*```GET:```* ```https://legend-of-github-api.herokuapp.com/contributor/contributions?username={username}```
+##### Response
+```JSON
+{
+    "forks": 1,
+    "contrinutions": [
+        {
+            "isContributor": true,
+            "repository": "relato-express"
+        }
+    ],
+    "contributionsAmount": 1
+}
+```
 
 <hr>
 
