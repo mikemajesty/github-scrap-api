@@ -3,7 +3,7 @@ const cheerio = require('cheerio');
 
 const getPullRequest = (userName) => {
   const options = {
-    uri: `https://github.com/celso-wo?utf8=%E2%9C%93&tab=repositories&q=&type=fork`,
+    uri: `https://github.com/${userName}?utf8=%E2%9C%93&tab=repositories&q=&type=fork`,
     transform: function (body) {
       return cheerio.load(body);
     }
@@ -31,63 +31,57 @@ const getPullRequest = (userName) => {
     const allPages = pagination.then(function (pages) {
       let promises = null;
       const linguagens = [];
-      if (pages.length > 0) {
-        promises = pages.reduce((promiseChain, page) => {
-          const optionsPaginator = {
-            uri: `https://github.com/celso-wo?language=&page=${page}&q=&tab=repositories&type=fork&utf8=%E2%9C%93`,
-            transform: function (body) {
-              return cheerio.load(body);
-            }
-          };
-          return promiseChain.then(() => rp(optionsPaginator)
-            .then(function ($) {
-              $('li').filter(function (i, el) {
-                return $(this).attr('itemprop') === 'owns';
-              }).each(function (index) {
-                linguagens.push({
-                  language: $(this).find('h3').find('a').html().replace(/\s/g, '')
-                });
-              });
-              return linguagens;
-            })
-            .catch(function (err) {
-              console.log('error', err);
-            }));
-
-        }, Promise.resolve());
-
-        return promises;
-      }
-    }).catch(err => reject(err));
-
-    allPages.then(data => {
-      const promiseContrinutors = [];
-      data.reduce((promiseChain, repository) => {
-        const contributorOption = {
-          uri: `https://github.com/celso-wo/${repository.language}/graphs/contributors`,
+      promises = pages.reduce((promiseChain, page) => {
+        const optionsPaginator = {
+          uri: `https://github.com/${userName}?language=&page=${page}&q=&tab=repositories&type=fork&utf8=%E2%9C%93`,
           transform: function (body) {
             return cheerio.load(body);
           }
         };
-        //https://assets-cdn.github.com/images/spinners/octocat-spinner-128.gif
-        if (repository.language === 'bootstrap-daterangepicker-rails') {
-          rp(contributorOption)
-            .then(function ($) {
-              console.log('ol', $('div.graphs').html())
-              $('ol').find('li').find('span').each(function (index) {
-                console.log('user', $(this).html())
+        return promiseChain.then(() => rp(optionsPaginator)
+          .then(function ($) {
+            $('li').filter(function (i, el) {
+              return $(this).attr('itemprop') === 'owns';
+            }).each(function (index) {
+              linguagens.push({
+                language: $(this).find('h3').find('a').html().replace(/\s/g, '')
               });
-              return 'linguagens';
-            }).catch(function (err) {
-              console.log('error', err);
             });
-        }
-
-        return promiseContrinutors.push(contributorOption);
+            return linguagens;
+          })
+          .catch(function (err) {
+            console.log('error', err);
+          }));
 
       }, Promise.resolve());
+      return promises;
+    }).catch(err => reject(err));
 
-      resolve(promiseContrinutors);
+    allPages.then(data => {
+      const getAll = [];
+      let p = null;
+      p = data.reduce((promiseChain, repository) => {
+        const contributorOption = {
+          uri: `https://github.com/${userName}/${repository.language}/commits?author=celso-wo`,
+          transform: function (body) {
+            return cheerio.load(body);
+          }
+        };
+
+        return promiseChain.then(() => rp(contributorOption)
+          .then(function ($) {
+            const conditional = $('ol').html() != null;
+            getAll.push({
+              isContributor: conditional,
+              repository: repository.language
+            });
+            return getAll;
+          }).catch(function (err) {
+            console.log('error', err);
+          })
+        );
+      }, Promise.resolve());
+      resolve(p);
     });
   });
 };
