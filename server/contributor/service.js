@@ -63,7 +63,7 @@ const getPullRequest = (userName) => {
       let p = null;
       p = data.reduce((promiseChain, repository) => {
         const contributorOption = {
-          uri: `https://github.com/${userName}/${repository.language}/commits?author=celso-wo`,
+          uri: `https://github.com/${userName}/${repository.language}/commits?author=${userName}`,
           transform: function (body) {
             return cheerio.load(body);
           }
