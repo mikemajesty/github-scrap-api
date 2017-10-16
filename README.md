@@ -358,6 +358,7 @@ const getCurrentStreak = axios.get(`https://legend-of-github-api.herokuapp.com/s
       })
 ```
 <hr>
+
 ### Get contributions information
 
 #### Gets forks information
