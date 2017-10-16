@@ -402,6 +402,7 @@ const getCurrentStreak = axios.get(`https://legend-of-github-api.herokuapp.com/s
 ```
 
 <hr>
+
 ### License
 
 It is available under the MIT license.
