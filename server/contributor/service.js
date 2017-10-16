@@ -31,7 +31,6 @@ const getPullRequest = (userName) => {
     const allPages = pagination.then(function (pages) {
       let promises = null;
       const linguagens = [];
-      pages = pages || [1];
       promises = pages.reduce((promiseChain, page) => {
         const optionsPaginator = {
           uri: `https://github.com/${userName}?language=&page=${page}&q=&tab=repositories&type=fork&utf8=%E2%9C%93`,
@@ -61,7 +60,6 @@ const getPullRequest = (userName) => {
     allPages.then(data => {
       const getAll = [];
       let p = null;
-      console.log('---------------------> log heroku', data);
       p = data.reduce((promiseChain, repository) => {
         const contributorOption = {
           uri: `https://github.com/${userName}/${repository.language}/commits?author=${userName}`,
