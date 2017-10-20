@@ -77,7 +77,7 @@
 ### Custom contributions information
 
 ##### Request
-*```GET:```* ```https://legend-of-github-api.herokuapp.com/contributor/contributions?username={username}```
+*```GET:```* ```https://legend-of-github-api.herokuapp.com/contributor?username={username}```
 ##### Response
 ```JSON
 {
@@ -357,6 +357,50 @@ const getCurrentStreak = axios.get(`https://legend-of-github-api.herokuapp.com/s
         console.log(e)
       })
 ```
+<hr>
+
+### Get contributions information
+
+#### Gets forks information
+
+##### Request
+*```GET:```* ```https://legend-of-github-api.herokuapp.com/contributor/contributions?username={username}```
+##### Response
+```JSON
+{
+    "information": [
+        {
+            "isContributor": true,
+            "repository": "relato-express"
+        }
+    ]
+}
+```
+#### Gets contributions amount
+
+##### Request
+*```GET:```* ```https://legend-of-github-api.herokuapp.com/contributor/amount?username={username}```
+##### Response
+```JSON
+{
+    "contributionsAmount": 1
+}
+```
+#### Gets the names of forks
+
+##### Request
+*```GET:```* ```https://legend-of-github-api.herokuapp.com/contributor/forks/names?username={username}```
+##### Response
+```JSON
+{
+    "forks": [
+        {
+            "name": "relato-express"
+        }
+    ]
+}
+```
+
 <hr>
 
 ### License
