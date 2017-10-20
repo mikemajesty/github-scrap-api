@@ -58,8 +58,15 @@ const getRepository = (userName) => {
                   }
                   starFork[index] = parseInt(temp);
                 });
+                let languages = "";
+                $(this).find('span').each(function (index, r) {
 
-                const language = $(this).find('span').text().replace(/\s/g, '');
+                  if (index === 1 && r) {
+                    if (r)
+                      languages = $(r).text().trim().replace(/\n|\r/g, "");
+                  }
+                })
+                const language = languages
                 const name = $(this).find('a').attr('itemprop', 'name codeRepository').html().trim().replace(/\n|\r/g, "");
                 const stars = starFork[0];
                 const forks = starFork[1];
@@ -109,8 +116,15 @@ const getRepository = (userName) => {
                 }
                 starFork[index] = parseInt(temp);
               });
+              let languages = "";
+              $(this).find('span').each(function (index, r) {
 
-              const language = $(this).find('span').text().replace(/\s/g, '');
+                if (index === 1 && r) {
+                  if (r)
+                    languages = $(r).text().trim().replace(/\n|\r/g, "");
+                }
+              })
+              const language = languages
               const name = $(this).find('a').attr('itemprop', 'name codeRepository').html().trim().replace(/\n|\r/g, "");
               const stars = starFork[0];
               const forks = starFork[1];
@@ -515,7 +529,15 @@ const getRepositoryLanguage = (userName) => {
                 return $(this).attr('itemprop') === 'owns' && $(this).find('span').text() && !$(this).find('span').text().trim().startsWith('Forked from');
               }).each(function (index) {
 
-                const language = $(this).find('span').text().replace(/\s/g, '');
+                let languages = "";
+                $(this).find('span').each(function (index, r) {
+
+                  if (index === 1 && r) {
+                    if (r)
+                      languages = $(r).text().trim().replace(/\n|\r/g, "");
+                  }
+                })
+                const language = languages
 
                 linguagens.push({
                   language: language
@@ -546,7 +568,15 @@ const getRepositoryLanguage = (userName) => {
               return $(this).attr('itemprop') === 'owns' && $(this).find('span').text() && !$(this).find('span').text().trim().startsWith('Forked from');
             }).each(function (index) {
 
-              const language = $(this).find('span').text().replace(/\s/g, '');
+              let languages = "";
+                $(this).find('span').each(function (index, r) {
+
+                  if (index === 1 && r) {
+                    if (r)
+                      languages = $(r).text().trim().replace(/\n|\r/g, "");
+                  }
+                })
+                const language = languages
 
               linguagens.push({
                 language: language
