@@ -3,7 +3,9 @@ const app = express();
 const bodyParser = require('body-parser');
 const port = process.env.PORT || 3000;
 const favicon = require('serve-favicon');
-const fs = require('fs');
+const cors = require('cors');
+ 
+app.use(cors())
 
 app.use(bodyParser.json());
 
