@@ -10,7 +10,7 @@ const download = (body) => {
           recipe: 'phantom-pdf'
         }
       }).then(function (resp) {
-        resolve(new Buffer(resp.content, 'binary').toString('base64'));
+        resolve(resp);
       });
     }).catch(function (e) {
       console.log(e);
