@@ -5,7 +5,7 @@ const port = process.env.PORT || 3000;
 const favicon = require('serve-favicon');
 const cors = require('cors');
  
-app.use(cors())
+app.use(cors());
 
 app.use(bodyParser.json());
 
@@ -17,12 +17,6 @@ app.listen(port, () => {
 
 app.get('/', (req, res) => {
   res.sendfile('static/index.html');
-});
-
-app.use((req, res, next) => {
-	res.header("Access-Control-Allow-Origin", "*");
-	res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-	next();
 });
 
 app.use('/', require('./server/api'));
