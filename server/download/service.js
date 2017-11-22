@@ -1,20 +1,10 @@
-const jsreport = require('jsreport')();
+const pdf = require('html-pdf');
+const fs = require('fs');
 
 const download = (body) => {
   return new Promise(function (resolve, reject) {
-    jsreport.init().then(function () {
-      jsreport.render({
-        template: {
-          content: body,
-          engine: 'jsrender',
-          recipe: 'phantom-pdf'
-        }
-      }).then(function (resp) {
-        resolve(resp);
-      });
-    }).catch(function (e) {
-      console.log(e);
-      reject(e);
+    return pdf.create(body).toBuffer(function (err, buffer) {
+      resolve(buffer);
     });
   });
 }
