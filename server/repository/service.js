@@ -14,7 +14,12 @@ const getRepository = (userName) => {
       let pagination = [];
 
       $('div.pagination').each(function (index) {
-        $(this).text().match(/\d+/g).forEach((page) => pagination.push(page));
+        const p = $(this).text().includes('Next');
+        if(p) {
+          $(this).text().match(/[A-Za-z]+/).forEach((page) => {
+            pagination.push(page);
+          });
+        }
       });
       return pagination;
     })
