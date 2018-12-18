@@ -1,6 +1,9 @@
 {
   "name": "github-scrap-api",
   "version": "0.0.1",
+  "engines": {
+    "node": "8.9.4"
+  },
   "description": "",
   "main": "server.js",
   "scripts": {
